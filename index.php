@@ -55,22 +55,6 @@
 
                       <div class="curso">                      
                         <div class="footCurso">
-                          <div class="nombreCurso">C&aacute;lculo Integral</div>
-                          <div class="tutor">[Nombre_Tutor]</div>
-                          <div class="descripcionCurso">[Descripcion_Curso]</div>
-                        </div>
-                      </div>
-                       
-                      <div class="curso">                      
-                        <div class="footCurso">
-                          <div class="nombreCurso">Programaci&oacute;n II</div>
-                          <div class="tutor">[Nombre_Tutor]</div>
-                          <div class="descripcionCurso">[Descripcion_Curso]</div>
-                        </div>
-                      </div>
-                       
-                      <div class="curso">                      
-                        <div class="footCurso">
                           <div class="nombreCurso">C&aacute;lculo Diferencial</div>
                           <div class="tutor">Juan Hadad Aguilar Romero</div>
                           <div class="descripcionCurso">Este curso esta dividido en tres importantes partes que es el temario, la parte te&oacute;rica y la parte práctica que son la resolución de ejercicios mostrados en un video.</div>
@@ -123,19 +107,6 @@
                 </div>
               </div>
 
-              <div class="usuario">
-                <div class="foto" id="francisco"></div>
-                <div class="infoContacto">
-                     Direcci&oacute;n
-                     <div class="descripContacto">
-                       <p>Desarrollador <br><br>
-                       </p>
-                     </div>
-                </div>
-              </div>
-
-              
-
           </div>
 
         </section>
@@ -166,10 +137,10 @@
         <section id="acceso">
         
                 <div id="containerAcceso">
-                  <form id="formLogin">
+                  <form id="formLogin" action="autentificar.php" method="POST">
                     <input type="text"     name= "matricula" placeHolder="Usuario" class="txt"> 
                     <input type="password" name= "password" placeHolder="Password" class="txt"> 
-                    <input type="submit" name="login" value="Iniciar Sesi&oacute;n" class="btn">
+                    <input type="submit"   name="login" value="Iniciar Sesi&oacute;n" class="btn">
                   </form>
 
                    <div id="info">
@@ -185,6 +156,5 @@
   <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
   <script type="text/javascript" src="js/scroll.js"></script>
   <script type="text/javascript" src="js/pf.js"></script>
-  <script type="text/javascript" src="js/aut.js"></script>
 </body>
 </html>
