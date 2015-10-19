@@ -56,8 +56,20 @@
             <section id="_perfil" class="section-usuario">
                 
                 <div class="info-section">
-                    <div class="title-section"></div>
-                    <div class="content-section"></div>
+                    <div class="title-section">Mi Perfil</div>
+                    <div class="content-section">
+                        <div class="info-perfil"><?php echo ''.$_SESSION['nombreUsuario'].''.$_SESSION['apellidosUsuario']; ?></div>
+                        <div class="info-perfil"><?php echo ''.$_SESSION['sesionUsuario'].''; ?></div>
+                        <div class="info-perfil"><?php echo ''.$_SESSION['correoUsuario'].''; ?></div>
+                        <div class="info-perfil">
+                            <?php 
+                               if($_SESSION['tipoUsuario']==1)
+                                echo 'Tipo Usuario : Tutor';
+                               else
+                                echo 'Tipo Usuario : Alumno';
+                        ?>
+                        </div>
+                    </div>
                 </div>
                 <div id="bg_perfil"></div>
             </section>

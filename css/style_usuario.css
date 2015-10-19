@@ -190,6 +190,14 @@
 	float: left;
 }
 
+.info-perfil{
+
+	width: auto;
+	height: auto;
+	padding: 5px;
+	font-size: 15px;
+}
+
 #_home{
 
     background-color: #F7763E;
@@ -212,9 +220,12 @@
 
 #bg_perfil{
 
-    background-image: url(../img/bg_home.png);
-    width: 650px;
-    height: 492px;
+    background-image: url(../img/p.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    left: 30px;
+    width: 410px;
+    height: 400px;
     position: relative;
     float: left;
     z-index: 1000!important;

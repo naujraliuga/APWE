@@ -53,7 +53,7 @@
                         </div>
                       </div>
 
-                      <div class="curso">                      
+                      <div class="curso" id="calculodiferencial">                      
                         <div class="footCurso">
                           <div class="nombreCurso">C&aacute;lculo Diferencial</div>
                           <div class="tutor">Juan Hadad Aguilar Romero</div>

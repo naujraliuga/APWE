@@ -25,7 +25,7 @@
          header("location:usuario.php");
      
      }else
-         $datos['exito'] = false;
+         header("location:index.php#acceso");
 
 
 ?>
