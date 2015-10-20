@@ -16,7 +16,7 @@ $(document).on('ready',function(){
     $('#perfil').on('click',function(){
         
        $('html, body').animate({
-           scrollTop: tam1
+           scrollTop: tam1+15
        },1500);
 
     });
@@ -24,7 +24,7 @@ $(document).on('ready',function(){
     $('#grupos').on('click',function(){
         
        $('html, body').animate({
-           scrollTop: tam1+tam2
+           scrollTop: tam1+tam2+30
        },1500);
 
     });
@@ -32,7 +32,7 @@ $(document).on('ready',function(){
     $('#configuracion').on('click',function(){
         
        $('html, body').animate({
-           scrollTop: tam1+tam2+tam3
+           scrollTop: tam1+tam2+tam3+45
        },1500);
 
     });

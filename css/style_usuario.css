@@ -9,7 +9,7 @@
 	height: auto;
 	min-height: 100%;
 	position: absolute;
-	background-color: #fff;
+	background-color: #F7763E;
 	float: left;
 	z-index: 1;
 }
@@ -33,7 +33,7 @@
 	padding: 3px;
 	position: fixed;
 	overflow: hidden;
-	background-color: #187BC6;
+	background-color: rgba(0,0,0,0.21);/*#187BC6*/
 	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.21);
 	float: left;
 	z-index: 3;
@@ -93,7 +93,7 @@
 	position: relative;
 	float: left;
 	background-color: transparent;
-	border-bottom:  1px solid rgba(0,0,0,0.21);
+	border-bottom:  1px solid rgba(255,255,255,0.81);
 }
 
 .nombre-opc{
@@ -205,7 +205,7 @@
 
 #_perfil{
 
-	background-color: #FF6600;
+	background-color: #F7763E;
 }
 
 #bg_home{
@@ -223,10 +223,98 @@
     background-image: url(../img/p.png);
     background-repeat: no-repeat;
     background-color: transparent;
-    left: 30px;
+    left: 150px;
+    top: 50px;
     width: 410px;
     height: 400px;
     position: relative;
     float: left;
     z-index: 1000!important;
+}
+
+#bg_cursos{
+
+    background-image: url(../img/bg_cursos.png);
+    width: 570px;
+    height: 492px;
+    background-repeat: no-repeat;
+    top: 80px;
+    position: relative;
+    float: left;
+    z-index: 1000!important;
+}
+
+#mis_grupos{
+
+  width: 40%;
+  height: 250px;
+  top: 80px;
+  position: relative;
+  float: left;
+  background-color: transparent;
+
+}
+
+#mis_grupos li{
+
+	list-style: none;
+	width: 80%;
+	left: 10%;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+	position: relative;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.31);
+}
+
+.group-section{
+
+	width: 38%;
+	height: auto;
+	left: 10%;
+	top: 30px;
+	background-color: transparent;
+	position: relative;
+	padding: 20px;
+	float: left;
+}
+
+.group-section legend{
+
+	color: #fff;
+}
+
+.tbx{
+
+	width: 100%;
+	height: 25px;
+	padding: 5px;
+	border: 0px;
+	border-bottom: 1px solid rgba(0,0,0,0.21);
+	color: #8f8f8f;
+	float: left;
+}
+
+.cbx{
+
+	width: 102.3%;
+	height: 35px;
+	padding: 10px;
+	border: 0px;
+	border-bottom: 1px solid rgba(0,0,0,0.21);
+	color: #8f8f8f;
+	float: left;
+	position: relative;
+}
+
+.btn{
+
+	width: 102.3%;
+	height: 45px;
+	padding: 5px;
+	border: 0px;
+	border-bottom: 1px solid rgba(0,0,0,0.21);
+	color: #8f8f8f;
 }

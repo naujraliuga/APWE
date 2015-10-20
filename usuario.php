@@ -61,6 +61,7 @@
                         <div class="info-perfil"><?php echo ''.$_SESSION['nombreUsuario'].''.$_SESSION['apellidosUsuario']; ?></div>
                         <div class="info-perfil"><?php echo ''.$_SESSION['sesionUsuario'].''; ?></div>
                         <div class="info-perfil"><?php echo ''.$_SESSION['correoUsuario'].''; ?></div>
+                        <div class="info-perfil">Cursos Actuales : [#]</div>
                         <div class="info-perfil">
                             <?php 
                                if($_SESSION['tipoUsuario']==1)
@@ -74,9 +75,56 @@
                 <div id="bg_perfil"></div>
             </section>
 
-            <section id="_grupos" class="section-usuario"></section>
+            <section id="_grupos" class="section-usuario">
+                 
+                 <div id="bg_cursos"></div>
+                 <div id="mis_grupos">
+                     <ul>
+                         <li>Mis Cursos</li>
+                         <li>Curso 1</li>
+                         <li>Curso 2</li>
+                     </ul>
+                 </div>
 
-            <section id="_configuracion" class="section-usuario"></section>
+            </section>
+
+            <section id="_configuracion" class="section-usuario">
+                
+
+                <fieldset class="group-section">
+                    <legend>Modificar Informaci&oacute;n Personal</legend>
+
+                    <form action="#" method="POST">
+                        <input type="text"     name="nombre"    placeHolder="Nombre"    class="tbx">
+                        <input type="text"     name="apellidos" placeHolder="Apellidos" class="tbx">
+                        <input type="text"     name="email"     placeHolder="Email"     class="tbx">
+                        <input type="password" name="password"  placeHolder="Password"  class="tbx">
+                        <input type="text"     name="matricula" placeHolder="Matricula" class="tbx">
+                        <select name="tipo-usuario" class="cbx">
+                            <option value="0">Cambiar tipo de usuario...</option>
+                            <option value="2">Alumno</option>
+                            <option value="1">Tutor</option>
+                        </select>
+
+                        <input type="submit" value="Guardar Cambios" class="btn">
+                    </form>
+                </fieldset>
+
+                <fieldset class="group-section">
+                    <legend>Dar de baja curso</legend>
+
+                    <form action="#" method="POST">
+                        <select name="mis-grupos" class="cbx">
+                            <option value="0">Seleccionar Grupo...</option>
+                            <option value="2">Grupo 1</option>
+                            <option value="1">Grupo 2</option>
+                        </select>
+
+                        <input type="submit" value="Eliminar Grupo" class="btn">
+                    </form>
+                </fieldset>
+
+            </section>
 
         </div>
 
