@@ -132,6 +132,14 @@
 	background-repeat: no-repeat;
 }
 
+#upload{
+
+	background-image: url(../img/upload.png);
+	background-position: 100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
 #grupos{
 
 	background-image: url(../img/grupos.png);
@@ -244,6 +252,18 @@
     z-index: 1000!important;
 }
 
+#bg_upload{
+
+    background-image: url(../img/bg_upload.png);
+    width: 570px;
+    height: 492px;
+    background-repeat: no-repeat;
+    top: 80px;
+    position: relative;
+    float: left;
+    z-index: 1000!important;
+}
+
 #mis_grupos{
 
   width: 40%;
@@ -267,6 +287,12 @@
 	background-color: #fff;
 	border-radius: 3px;
 	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.31);
+}
+
+#mis_grupos li:hover{
+
+	cursor: pointer;
+	background-color: #f2f2f2;
 }
 
 .group-section{
@@ -317,4 +343,20 @@
 	border: 0px;
 	border-bottom: 1px solid rgba(0,0,0,0.21);
 	color: #8f8f8f;
+}
+
+.btn:hover, .btn-file:hover{
+
+	cursor: pointer;
+}
+
+.btn-file{
+
+	height: 30px;
+	border: none;
+}
+
+#oculto{
+
+	display: none;
 }

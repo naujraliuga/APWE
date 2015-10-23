@@ -26,13 +26,18 @@
      			</li>
      			<li>
      				<div class="ico-opc" id="grupos"></div>
-     				<div class="nombre-opc">Mis Grupos</div>
+     				<div class="nombre-opc">Mis Cursos</div>
      			</li>
      			
-     				<li>
-     				  <div class="ico-opc" id="configuracion"></div>
-     				  <div class="nombre-opc">Configuraci&oacute;n</div>
-     			    </li>
+                <li>
+                  <div class="ico-opc" id="upload"></div>
+                  <div class="nombre-opc">Subir Archivo</div>
+                </li>
+
+     			<li>
+     			  <div class="ico-opc" id="configuracion"></div>
+     			  <div class="nombre-opc">Configuraci&oacute;n</div>
+     			</li>
      			
      		</ul>
      	</div>
@@ -123,6 +128,21 @@
                         <input type="submit" value="Eliminar Grupo" class="btn">
                     </form>
                 </fieldset>
+
+            </section>
+
+            <section id="upload-file" class="section-usuario">
+                <div id="bg_upload"></div>
+                <div class="info-section">
+                    <div class="title-section">Mi Perfil</div>
+                    <div class="content-section">
+                         <form  name="subir_archivo" action="subir_alumno.php" method="post" enctype="multipart/form-data" id="form_subir">
+                                <input type="file" name="archivo_seleccionado" class="btn-file">
+                                <input type="text" name="matricula" value="201307186" id="oculto">
+                                <input type="submit" value="Subir" class="btn">
+                         </form>
+                    </div>
+                </div>
 
             </section>
 
