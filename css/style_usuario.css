@@ -148,6 +148,14 @@
 	background-repeat: no-repeat;
 }
 
+#buscar{
+
+	background-image: url(../img/buscar.png);
+	background-position: 100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
 /*secciones*/
 
 .section-usuario{
@@ -264,6 +272,29 @@
     z-index: 1000!important;
 }
 
+#bg_buscar{
+
+    background-image: url(../img/bg_buscar.png);
+    width: 570px;
+    height: 492px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    background-position: 0px -61px;
+    margin-left: 200px;
+    top: 0px;
+    position: relative;
+    float: left;
+    z-index: 1000!important;
+}
+
+#bg_buscar form{
+
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 50px;
+}
+
 #mis_grupos{
 
   width: 40%;
@@ -356,7 +387,46 @@
 	border: none;
 }
 
+#btn-upload{
+
+	background-color: #fff;
+	border-radius: 2px;
+	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.21);
+	color: #8f8f8f;
+}
+
+#btn-upload:hover{
+
+	background-color: #f2f2f2;
+}
+
 #oculto{
 
 	display: none;
 }
+
+.txt-buscar{
+
+	width: 80%;
+	height: 20px;
+	padding: 5px;
+	border: none;
+	float: left;
+	border-radius: 2px;
+}
+
+.btn-buscar{
+
+	width: 18%;
+	height: 30px;
+	padding: 5px;
+	border: none;
+	color: #fff;
+	background-color: rgba(0,0,0,0.65);
+}
+
+.btn-buscar:hover{
+	cursor: pointer;
+	background-color: rgba(0,0,0,0.35);
+}
+

@@ -7,7 +7,8 @@
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script type="text/javascript" src="js/menu-usuario.js"></script>
     <script type="text/javascript" src="js/scroll-usuario.js"></script>
-    <?php include 's.php'; ?>
+    <?php include 's.php'; 
+    include 'consultas.php';?>
 	<title>:: <?php echo ''.$_SESSION['nombreUsuario'].''; ?></title>
 </head>
 <body>
@@ -38,6 +39,11 @@
      			  <div class="ico-opc" id="configuracion"></div>
      			  <div class="nombre-opc">Configuraci&oacute;n</div>
      			</li>
+
+                <li>
+                  <div class="ico-opc" id="buscar"></div>
+                  <div class="nombre-opc">Buscar Curso</div>
+                </li>
      			
      		</ul>
      	</div>
@@ -66,7 +72,7 @@
                         <div class="info-perfil"><?php echo ''.$_SESSION['nombreUsuario'].''.$_SESSION['apellidosUsuario']; ?></div>
                         <div class="info-perfil"><?php echo ''.$_SESSION['sesionUsuario'].''; ?></div>
                         <div class="info-perfil"><?php echo ''.$_SESSION['correoUsuario'].''; ?></div>
-                        <div class="info-perfil">Cursos Actuales : [#]</div>
+                        <div class="info-perfil">Cursos Actuales : [<?php echo''.contGrupos($_SESSION['sesionUsuario']).''; ?>]</div>
                         <div class="info-perfil">
                             <?php 
                                if($_SESSION['tipoUsuario']==1)
@@ -134,16 +140,25 @@
             <section id="upload-file" class="section-usuario">
                 <div id="bg_upload"></div>
                 <div class="info-section">
-                    <div class="title-section">Mi Perfil</div>
+                    <div class="title-section">Subir Archivo</div>
                     <div class="content-section">
                          <form  name="subir_archivo" action="subir_alumno.php" method="post" enctype="multipart/form-data" id="form_subir">
                                 <input type="file" name="archivo_seleccionado" class="btn-file">
                                 <input type="text" name="matricula" value="201307186" id="oculto">
-                                <input type="submit" value="Subir" class="btn">
+                                <input type="submit" value="Subir" class="btn" id="btn-upload">
                          </form>
                     </div>
                 </div>
 
+            </section>
+
+            <section id="buscar-curso" class="section-usuario">
+                <div id="bg_buscar">
+                    <form action="#" method="POST">
+                        <input type="txt" name="curso" class="txt-buscar" placeHolder="Nombre Curso...">
+                        <input type="submit" name="buscar-curso" class="btn-buscar" value="Buscar">
+                    </form>
+                </div>
             </section>
 
         </div>
