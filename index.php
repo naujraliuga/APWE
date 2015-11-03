@@ -25,7 +25,7 @@
         
         <section id="inicio">
 
-        	<div class="containerInfo">
+        	<div id="ContaIn"class="containerInfo">
 
             <p><span class="black">Descripci&oacute;n :</span> El desarrollo del sistema se plantea a partir de la existencia de un gran numero de alumnos reprobados en diferentes materias impartidas en la facultad.
             </p><br>
