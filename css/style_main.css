@@ -18,14 +18,13 @@ body{
 	z-index: 1;
 }
 
-
 #header{
 
 	width: 100%;
 	height: 58px;
 	background-color: #187BC6;
 	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.21);
-	
+	position: fixed;
 	overflow: hidden;
 	z-index: 2;
 }
@@ -35,8 +34,10 @@ body{
 	width: 40%;
 	height: 100%;
 	padding: 10px;
-	background-color: transparent;
 	text-align: center;
+	background-color: transparent;
+	position: relative;
+	float: right;
 	z-index: 2;
 }
 
@@ -44,7 +45,7 @@ body{
 
 	list-style: none;
 	float: left;
-	margin-left: 5%;
+	margin-left: 3%;
 	padding: 5px;
 	color: #f2f2f2;
 }
@@ -65,7 +66,7 @@ body{
 	margin-left: 65px;
 	margin-top: 12px;
 	color: #fff;
-	font-size: 22px;
+	font-size: 20px;
 	text-shadow: black 0.1em 0.1em 0.2em;
 	z-index: 2;
 }
@@ -84,18 +85,7 @@ body{
 }
 
 
-#inicio{
-	width: 90%;
-	height: auto;
-	margin-left: 5%;
-	background-color: transparent;
-	border-bottom: 1px solid rgba(0,0,0,0.4);
-	position: relative;
-	float: left;
-	z-index: 1;
-}
-
-#cursos, #pf, #contacto, #acceso{
+#inicio, #cursos, #pf, #contacto, #acceso{
 
 	width: 90%;
 	min-height: 620px;
@@ -124,7 +114,7 @@ body{
 	width: 75%;
 	height: 450px;
 	margin-top: 80px;
-	margin-left: 15px;
+	margin-left: 10px;
 	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.21);
 	background-color: transparent;
 	background-image: url(../img/fcc.png);
@@ -135,7 +125,7 @@ body{
 }
 .containerInfo{
     
-    width: 30%;
+    width: 20%;
     height: auto;
     max-height: 450px;
     overflow-y: auto;
@@ -245,12 +235,6 @@ body{
 #programacion1{
 
 	background-image: url(../img/progra1.png);
-	background-position: center;
-	background-repeat: no-repeat;
-}
-#calculodiferencial{
-
-	background-image: url(../img/CD.png);
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -366,20 +350,18 @@ body{
 	color: #8f8f8f;
 }
 
-.cbx{
-
-	width: 100%;
-	height: 40px;
-	padding: 5px;
-	border: none;
-	border-bottom: 1px solid rgba(0,0,0,0.4);
-	color: #8f8f8f;
+.txt:focus{
+    
+    border-color: none;
+    content: '';
+    outline: 0px;
+    border: 1px solid #F2F2F2;
 }
 
 .btn{
 
 	width: 100%;
-	height: 50px;
+	height: 40px;
 	padding: 10px;
 	border: none;
 	background-color: rgba(82, 158, 204, 1);
@@ -506,7 +488,7 @@ body{
 	width: 40%;
 	height: auto;
 	padding: 10px;
-	margin-left: 0%;
+	margin-left: 30%;
 	margin-top: 150px;
 	position: fixed;
 	float: left;
@@ -559,6 +541,7 @@ body{
 	margin-bottom: 10%;
 	float: left;
 	overflow: hidden;
+
 }
 
 .black{
@@ -566,78 +549,155 @@ body{
 	color: #424242;
 }
 
-@media(min-width: 1081px){
-	#ContaIn{
-		width: 20%;
-		
-	}
-	#menu{
-		width: 50%;
-		margin-left: 40em;
-		font-size: 1.3em;
-	}
+/*============DISEÑO RESPONSIVE============*/
+
+@media screen and (max-width: 1024px) { }
+
+@media screen and (max-width: 800px) {
+
+   #header{
+
+   	height: 115px;
+   }
+
+   #title-app{
+
+   	width: 100%;
+   	margin-top: 10px;
+   	margin-left: 50px;
+   }
+
+   #icon-buap{
+
+   	margin-left: 2px;
+   }
+
+   #menu{
+
+   	width: 95%;
+   	margin-top: 45px;
+   }
+
+   .containerInfo{
+
+   	margin-top: 120px;
+   	width: 95%;
+   }
+   
+   .containerInfo p {
+     text-align: justify;
+     margin-top: 10px;
+    }
+   #containerImg{
+   	  display: none;
+   }
+
+   #containerCursos{
+
+   	margin-top: 120px;
+   }
+
+   .curso{
+
+   	width: 95%;
+   }
+
+   #containerContactos{
+
+   	width: 95%;
+   	margin-left: 0px;
+   }
+
+   .usuario{
+
+   	margin-left: 10px;
+   }
+
+   #containerPF, #containerAcceso{
+
+   	margin-top: 120px;
+   	width: 95%;
+   	margin-left: 0px;
+   }
+
+   #containerAcceso form{
+
+   	width: 100%;
+   	margin-left: 1.5%;
+   }
+ 
 }
 
-@media(max-width: 1510px){
-	#header{
-		height: 80px;
-	}
-	#menu{
-		font-size: 1.3em;
-		margin-left: 20em;
-	}
+@media screen and (max-width: 480px) {
 
-    #containerImg{
-		width: 60%;
-		
-	}
+   #header{
 
-}
+   	height: 115px;
+   }
 
-@media(max-width: 800px){
-	#menu{
-		font-size: 1.3em;
-		margin-left: 18em;
-	}
-    #containerImg{
-		width: 50%;
-		
-	}
+   #title-app{
 
-}
+   	width: 100%;
+   	margin-top: 10px;
+   	margin-left: 50px;
+   }
 
-@media(max-width: 730px){
-	#header{
-		height: 300px;
-	}
-	#menu {
-		width: 30%;
-		padding: 50px;
-	    margin-left: 4em;
-	    font-size: 1.5em;
-	}
-	#ContaIn{
-		width: 95%;
-	}
-	#inicio{
-		margin: 1em;
-		margin-left: 1.4em;
-		
-	}
-	#containerImg{
-		width: 100%;
-		height:150px; 
-		margin-left:0.1em;
-	}
-	#containerContactos{
-		margin-left: 15%;
-		margin-top: 35px;
-	}
-	#containerAcceso{
-		width: 300px;
-		margin-left: 2em;
-	}
-	#containerCursos{
-		margin-top: 1px;
-	}
+   #icon-buap{
+
+   	margin-left: 2px;
+   }
+
+   #menu{
+
+   	width: 95%;
+   	margin-top: 45px;
+   }
+
+   .containerInfo{
+
+   	margin-top: 120px;
+   	width: 95%;
+   }
+   
+   .containerInfo p {
+     text-align: justify;
+     margin-top: 10px;
+    }
+   #containerImg{
+   	  display: none;
+   }
+
+   #containerCursos{
+
+   	margin-top: 120px;
+   }
+
+   .curso{
+
+   	width: 95%;
+   }
+
+   #containerContactos{
+
+   	width: 95%;
+   	margin-left: 0px;
+   }
+
+   .usuario{
+
+   	margin-left: 10px;
+   }
+
+   #containerPF, #containerAcceso{
+
+   	margin-top: 120px;
+   	width: 95%;
+   	margin-left: 0px;
+   }
+
+   #containerAcceso form{
+
+   	width: 100%;
+   	margin-left: 1.5%;
+   }
 }

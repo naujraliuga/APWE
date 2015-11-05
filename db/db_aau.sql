@@ -32,19 +32,6 @@ CREATE TABLE IF NOT EXISTS `cursos` (
   `descripcion` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `cursos`
---
-
-INSERT INTO `cursos` (`id_curso`, `nombre`, `descripcion`) VALUES
-(100, 'Programación 1', 'En este curso el alumno aprendera los conceptos basicos de programacion 1, manejo de condiciones (if-else,switch,etc), ciclos (for,while, do-while), manejo de arreglos y estructuras en lenguaje C.'),
-(101, 'Cálculo Diferencial', 'Este curso esta dividido en tres importantes partes que es el temario, la parte teórica y la parte práctica que son la resolución de ejercicios mostrados en un video.');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `usuarios`
---
 
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `matricula` int(11) NOT NULL DEFAULT '0',
@@ -55,18 +42,6 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `correo` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `usuarios`
---
-
-INSERT INTO `usuarios` (`matricula`, `nombre`, `apellidos`, `password`, `tipo`, `correo`) VALUES
-(201307186, 'Francisco Javier', 'Ramirez Tovar', '201307186', 1, 'xavi_991@hotmail.com');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `usuarios_cursos`
---
 
 CREATE TABLE IF NOT EXISTS `usuarios_cursos` (
   `matricula` int(11) DEFAULT NULL,
