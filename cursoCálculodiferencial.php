@@ -32,7 +32,7 @@
       <b>Definici&oacute;n de derivada</b>
       <br>
       <br>
-      La derivada de una funci&oacute;n es igual a: el l&iacute;mite,cuando el incremento de la variable independiente tiende a cero del incremento de la funci&oacute;n sobre el incremento de la variable dependiente. La siguiente ecuaci&oacute;n muestra de manera visual la definici&oacute;n anterior:
+      La derivada de una funci&oacute;n es igual: al l&iacute;mite,cuando el incremento de la variable independiente tiende a cero de incremento de la funci&oacute;n sobre el incremento de la variable dependiente. La siguiente ecuaci&oacute;n muestra de manera visual la definici&oacute;n anterior:
       <br>
       <br>
       <div style="text-align:center;">
@@ -58,7 +58,27 @@
        <b>Derivadas comunes</b>
       <br>
       <br>
-       Este tipo de dervidas son la formas generales para la soluci&oacute;n de ejercicios particulares (ejercicios que pueden variar ya sea si un factor multiplica a la funci&oacute;n o en otros caso el argumento puede estar compuesto por m&aacute;s de un t&eacute;rmino).
+       Este tipo de dervidas son las formas generales para la soluci&oacute;n de ejercicios particulares (ejercicios que pueden variar ya sea si un factor multiplica a la funci&oacute;n o en otros caso el argumento puede estar compuesto por m&aacute;s de un t&eacute;rmino). En este curso hemos decidido dividir en dos familias de derivadas de acuerdo a las funciones a resolver, las cuales son: <b>Funciones algebraicas</b> y <b>Funciones trigonom&eacute;tricas
+        </p>
+       </b>
+       <br>
+       <br>
+       <p style="text-align:justify;">
+       Para el caso de las derivadas de funciones algebraicas, las m&aacute;s generales son las siguientes:
+       <br>
+       <br>
+       <div style="text-align:center;">
+      <img id="Imagen1" src="img/dderivada03.png"/>
+       
+      <img id="Imagen1" src="img/dderivada04.png"/>
+      
+      <img id="Imagen1" src="img/dderivada05.png"/>
+      <br>
+      <br>
+      <iframe id="Video1" width="420" height="315" src="https://www.youtube.com/embed/0opaDVgBzQA" frameborder="0" allowfullscreen></iframe></iframe>
+      <br>
+      <br>
+      </div>
       </p>
       </div>
 

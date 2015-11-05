@@ -9,12 +9,12 @@ body{
 #title{
    
 	width: 100%;
-	height: 2em;
+	height: 1.2em;
 	text-align: center;
 	padding: 10px;
 	background-color: #F7763E;
 	color: #fff;
-	font-size: 30px;
+	font-size: 60px;
 	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.21);
 	position: center;
 	z-index: 1;
@@ -39,8 +39,28 @@ ul li{
 }
 
 #Imagen{
+	
 	height: 65px;  
 	background: #FFF;
 	border: 0.1em solid #000;
-	border-radius: 0.25em; 
+	border-radius: 0 0.5em 0 0.5em;
+}
+
+#Imagen1{
+    
+    margin-right: 3em;
+    margin-bottom: 1.5em;
+    margin-left: 1em;
+	display: inline-block;
+	height: 450px;  
+	background: #FFF;
+	border: 0.1em solid #000;
+	border-radius: 0 0.5em 0 0.5em;
+
+}
+
+#Video1{
+	border: 0.8em solid #F7763E;
+	border-radius: 0 0.7em 0 0.7em;
+	border-style: dashed;
 }
