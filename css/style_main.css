@@ -239,6 +239,16 @@ body{
 	background-repeat: no-repeat;
 }
 
+
+#calculodiferencial{
+
+	background-image: url(../img/CD.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+
 #containerContactos{
 
 	width: 50%;
