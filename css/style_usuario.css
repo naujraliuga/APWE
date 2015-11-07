@@ -156,6 +156,14 @@
 	background-repeat: no-repeat;
 }
 
+#logout{
+
+	background-image: url(../img/logout.png);
+	background-position: 100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
 /*secciones*/
 
 .section-usuario{

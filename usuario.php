@@ -48,7 +48,7 @@
                 
                 <a href="salir.php">
                 <li>
-                  <div class="ico-opc" id="salir"></div>
+                  <div class="ico-opc" id="logout"></div>
                   <div class="nombre-opc">Salir</div>
                 </li>
                 </a>
