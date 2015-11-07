@@ -132,14 +132,14 @@
                 <fieldset class="group-section">
                     <legend>Modificar Informaci&oacute;n Personal</legend>
 
-                    <form action="#" method="POST">
-                        <input type="text"     name="nombre"    placeHolder=<?php echo''.$_SESSION['nombreUsuario'].''; ?>    class="tbx">
-                        <input type="text"     name="apellidos" placeHolder=<?php echo''.$_SESSION['apellidosUsuario'].''; ?> class="tbx">
-                        <input type="text"     name="email"     placeHolder=<?php echo''.$_SESSION['correoUsuario'].''; ?>     class="tbx">
-                        <input type="text"     name="matricula" placeHolder=<?php echo''.$_SESSION['sesionUsuario'].''; ?>    class="tbx">
-                        <input type="password" name="password"  placeHolder=<?php echo''.$_SESSION['passwordUsuario'].''; ?>  class="tbx">
+                    <form action="update_usuario.php" method="POST">
+                        <input type="text"     name="nombre"    value = <?php echo''.$_SESSION['nombreUsuario'].''; ?>    class="tbx">
+                        <input type="text"     name="apellidos" value = <?php echo''.$_SESSION['apellidosUsuario'].''; ?> class="tbx">
+                        <input type="text"     name="email"     value = <?php echo''.$_SESSION['correoUsuario'].''; ?>     class="tbx">
+                        <input type="text"     name="matricula" value = <?php echo''.$_SESSION['sesionUsuario'].''; ?>    class="tbx">
+                        <input type="password" name="password"  value = <?php echo''.$_SESSION['passwordUsuario'].''; ?>  class="tbx">
                         <select name="tipo-usuario" class="cbx">
-                            <option value="0"><?php if($_SESSION['tipoUsuario']==1)
+                            <option value=<?php echo ''.$_SESSION['tipoUsuario'].''; ?>><?php if($_SESSION['tipoUsuario']==1)
                                                        echo'Tutor'; 
                                                        else
                                                         echo'Alumno'; 
@@ -156,9 +156,9 @@
                 <fieldset class="group-section">
                     <legend>Dar de baja curso</legend>
 
-                    <form action="#" method="POST">
-                        <select name="mis-grupos" class="cbx">
-                           <option value="0">Seleccionar Grupo...</option>
+                    <form action="eliminar_curso.php" method="POST">
+                        <input type="text" name="matricula" value=<?php echo''.$_SESSION['sesionUsuario'].''; ?> class="oculto">
+                        <select name="baja-grupo" class="cbx">
                         <?php 
                              include 'conexion.php';
 
@@ -168,8 +168,8 @@
                              if($FILAS>=1){
                         
                                 while($RES=mysqli_fetch_array($CURSO)){
-                                    $NOMBRE_GRUPO = getGrupo($RES['id_curso']);
-                                    echo '<option value="'.$NOMBRE_GRUPO['nombre'].'">'.$NOMBRE_GRUPO['nombre'].'</option>';
+                                    $NOMBRE_GRUPO = getGrupos($RES['id_curso']);
+                                    echo '<option value="'.$RES['id_curso'].'">'.$NOMBRE_GRUPO['nombre'].'</option>';
                                    
                                 }
                              }else
@@ -191,9 +191,28 @@
                 <div class="info-section">
                     <div class="title-section">Subir Archivo</div>
                     <div class="content-section">
-                         <form  name="subir_archivo" action="subir_alumno.php" method="post" enctype="multipart/form-data" id="form_subir">
+                         <form  name="subir_archivo" action="subir_archivo.php" method="post" enctype="multipart/form-data" id="form_subir">
                                 <input type="file" name="archivo_seleccionado" class="btn-file">
-                                <input type="text" name="matricula" value="201307186" id="oculto">
+                                <input type="text" name="matricula" value=<?php echo''.$_SESSION['sesionUsuario'].''; ?> class="oculto">
+                                <select name="archivo-curso" class="cbx">
+                                 <option value="0">Curso al que pertenece el archivo</option>
+                                   <?php 
+                                    include 'conexion.php';
+
+                                    $CURSO = mysqli_query($conexion,'SELECT * FROM usuarios_cursos WHERE matricula="'.$_SESSION['sesionUsuario'].'"');
+                                    $FILAS = mysqli_num_rows($CURSO);
+
+                                    if($FILAS>=1){
+                        
+                                       while($RES=mysqli_fetch_array($CURSO)){
+                                           $NOMBRE_GRUPO = getGrupos($RES['id_curso']);
+                                           echo '<option value="'.$RES['id_curso'].'">'.$NOMBRE_GRUPO['nombre'].'</option>';
+                                   
+                                       }
+                                    }else
+                                   echo '<option value="0">Sin Grupos</option>';
+                                  ?>  
+                                </select>
                                 <input type="submit" value="Subir" class="btn" id="btn-upload">
                          </form>
                     </div>
@@ -203,8 +222,32 @@
 
             <section id="buscar-curso" class="section-usuario">
                 <div id="bg_buscar">
-                    <form action="#" method="POST">
-                        <input type="txt" name="curso" class="txt-buscar" placeHolder="Nombre Curso...">
+                    <form action="redir.php" method="POST">
+                        <select name="buscar-grupo" class="cbx">
+                    <option class="txt-buscar" value ="0">Buscar Cursos...</option>
+                        <?php 
+                             include 'conexion.php';
+
+                             $CURSO = mysqli_query($conexion,'SELECT * FROM cursos');
+                             $FILAS = mysqli_num_rows($CURSO);
+
+                             if($FILAS>=1){
+                        
+                                while($RES=mysqli_fetch_array($CURSO)){
+                                    $NOMBRE_GRUPO = getGrupos($RES['id_curso']);
+
+                                    if($RES['id_curso']==100){
+                                       echo '<option value="'.$RES['id_curso'].'">'.$NOMBRE_GRUPO['nombre'].'</option>';
+                        
+                                    }else if($RES['id_curso']==101){
+                                       echo '<option value="'.$RES['id_curso'].'">'.$NOMBRE_GRUPO['nombre'].'</option>';
+                                    }
+                                   
+                                }
+                             }else
+                            echo '<option value="0">Sin Cursos en el sistema</option>';
+                        ?>   
+                        </select>
                         <input type="submit" name="buscar-curso" class="btn-buscar" value="Buscar">
                     </form>
                 </div>

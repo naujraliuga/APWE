@@ -11,7 +11,6 @@ body{
 	width: 100%;
 	height: 1.2em;
 	text-align: center;
-	padding: 10px;
 	background-color: #F7763E;
 	color: #fff;
 	font-size: 60px;
@@ -63,4 +62,33 @@ ul li{
 	border: 0.8em solid #F7763E;
 	border-radius: 0 0.7em 0 0.7em;
 	border-style: dashed;
+}
+
+
+#containerAddGrupo{
+
+	width: 150px;
+	height: auto;
+	padding: 5px;
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: #f2f2f2;
+    font-size: 16px;
+    border-radius: 3px;
+    color: #000;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.21);
+    z-index: 2;
+}
+
+#containerAddGrupo:hover{
+
+	cursor: pointer;
+	color: #8f8f8f;
+}
+
+.oculto{
+
+	display: block;
 }

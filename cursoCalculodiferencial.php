@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
-     <link type="text/css" rel="stylesheet" href="css/style_curso1.css">
+    <?php 
+      include 'consultas.php'; 
+      session_start();
+      $idCurso = 101;
+    ?>
+
+  <link type="text/css" rel="stylesheet" href="css/style_curso1.css">
 	<title>C&aacute;lculo Diferencial</title>
 </head>
 <body style="text-aling:justify;">
-        <section id="title">C&aacute;lculo Diferencial</section>
+        <section id="title">
+        C&aacute;lculo Diferencial
+
+        <?php 
+                if(empty($_SESSION['sesionUsuario']))
+                  echo '<a href="index.php#acceso"><div id="containerAddGrupo"> Inscribirme a Curso</div></a>';
+                else{
+
+                  if(verificarCurso($_SESSION['sesionUsuario'],$idCurso))
+                   echo '<div id="containerAddGrupo"> Inscrito</div>';
+                  else{
+                    echo '<form action="altaCurso.php" method="POST">';
+                    echo '<input type="text" name="matricula" value="'.$_SESSION['sesionUsuario'].'"'.'class="oculto">';
+                    echo '<input type="text" name="matricula" value="'.$idCurso.'"'.'class="oculto">';
+                    echo '<input type="submit" id="containerAddGrupo" value="Inscribirme a Curso" class="btn">';
+                    echo '</form>';
+                  }
+                }
+
+                 
+        
+         ?>
+
+        </section>
     	
         <div id="Temario">
       <br>
@@ -81,6 +109,7 @@
       </div>
       </p>
       </div>
-
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/agregarGrupo.js"></script>
 </body>
 </html>

@@ -7,5 +7,10 @@ $(document).on('ready', function(){
 
      });
 
+     $('#alta').on('click',function(){
+
+     	
+     });
+
 
 });
