@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-   
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/style_usuario.css">
+
 
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script type="text/javascript" src="js/menu-usuario.js"></script>
@@ -44,6 +45,13 @@
                   <div class="ico-opc" id="buscar"></div>
                   <div class="nombre-opc">Buscar Curso</div>
                 </li>
+                
+                <a href="salir.php">
+                <li>
+                  <div class="ico-opc" id="salir"></div>
+                  <div class="nombre-opc">Salir</div>
+                </li>
+                </a>
      			
      		</ul>
      	</div>
@@ -90,10 +98,29 @@
                  
                  <div id="bg_cursos"></div>
                  <div id="mis_grupos">
-                     <ul>
-                         <li>Mis Cursos</li>
-                         <li>Curso 1</li>
-                         <li>Curso 2</li>
+                 <ul>
+                    <li>Mis Cursos</li>
+                 <?php 
+                     include 'conexion.php';
+
+                     $CURSO = mysqli_query($conexion,'SELECT * FROM usuarios_cursos WHERE matricula="'.$_SESSION['sesionUsuario'].'"');
+                     $FILAS = mysqli_num_rows($CURSO);
+
+                     if($FILAS>=1){
+                        
+                        while($RES=mysqli_fetch_array($CURSO)){
+                            $NOMBRE_GRUPO = getGrupos($RES['id_curso']);
+
+                            if($RES['id_curso']==100){
+                               echo '<a href="cursoProgramacionI.php"><li>'.$NOMBRE_GRUPO['nombre'].'</li></a>';
+                            }else if($RES['id_curso']==101){
+                                echo '<a href="cursoCalculodiferencial.php"><li>'.$NOMBRE_GRUPO['nombre'].'</li></a>';
+                            }
+
+                        }
+                     }else
+                            echo '<li>Sin Cursos</li>';
+                ?>
                      </ul>
                  </div>
 
@@ -106,13 +133,18 @@
                     <legend>Modificar Informaci&oacute;n Personal</legend>
 
                     <form action="#" method="POST">
-                        <input type="text"     name="nombre"    placeHolder="Nombre"    class="tbx">
-                        <input type="text"     name="apellidos" placeHolder="Apellidos" class="tbx">
-                        <input type="text"     name="email"     placeHolder="Email"     class="tbx">
-                        <input type="password" name="password"  placeHolder="Password"  class="tbx">
-                        <input type="text"     name="matricula" placeHolder="Matricula" class="tbx">
+                        <input type="text"     name="nombre"    placeHolder=<?php echo''.$_SESSION['nombreUsuario'].''; ?>    class="tbx">
+                        <input type="text"     name="apellidos" placeHolder=<?php echo''.$_SESSION['apellidosUsuario'].''; ?> class="tbx">
+                        <input type="text"     name="email"     placeHolder=<?php echo''.$_SESSION['correoUsuario'].''; ?>     class="tbx">
+                        <input type="text"     name="matricula" placeHolder=<?php echo''.$_SESSION['sesionUsuario'].''; ?>    class="tbx">
+                        <input type="password" name="password"  placeHolder=<?php echo''.$_SESSION['passwordUsuario'].''; ?>  class="tbx">
                         <select name="tipo-usuario" class="cbx">
-                            <option value="0">Cambiar tipo de usuario...</option>
+                            <option value="0"><?php if($_SESSION['tipoUsuario']==1)
+                                                       echo'Tutor'; 
+                                                       else
+                                                        echo'Alumno'; 
+                                               ?>
+                            </option>
                             <option value="2">Alumno</option>
                             <option value="1">Tutor</option>
                         </select>
@@ -126,9 +158,26 @@
 
                     <form action="#" method="POST">
                         <select name="mis-grupos" class="cbx">
-                            <option value="0">Seleccionar Grupo...</option>
-                            <option value="2">Grupo 1</option>
-                            <option value="1">Grupo 2</option>
+                           <option value="0">Seleccionar Grupo...</option>
+                        <?php 
+                             include 'conexion.php';
+
+                             $CURSO = mysqli_query($conexion,'SELECT * FROM usuarios_cursos WHERE matricula="'.$_SESSION['sesionUsuario'].'"');
+                             $FILAS = mysqli_num_rows($CURSO);
+
+                             if($FILAS>=1){
+                        
+                                while($RES=mysqli_fetch_array($CURSO)){
+                                    $NOMBRE_GRUPO = getGrupo($RES['id_curso']);
+                                    echo '<option value="'.$NOMBRE_GRUPO['nombre'].'">'.$NOMBRE_GRUPO['nombre'].'</option>';
+                                   
+                                }
+                             }else
+                            echo '<option value="0">Sin Grupos</option>';
+                        ?>
+                            
+                            
+                            
                         </select>
 
                         <input type="submit" value="Eliminar Grupo" class="btn">

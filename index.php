@@ -51,6 +51,7 @@
                           <div class="descripcionCurso">
                             <p>En este curso el alumno aprendera los conceptos basicos de programacion 1, manejo de condiciones (if-else,switch,etc), ciclos (for,while, do-while), manejo de arreglos y estructuras en lenguaje C.</p>
                           </div>
+                          <div class="inscribirme" class="add">Inscribirme</div>
                         </div>
                       </div>
                       
@@ -60,6 +61,7 @@
                           <div class="nombreCurso">C&aacute;lculo Diferencial</div>
                           <div class="tutor">Juan Hadad Aguilar Romero</div>
                           <div class="descripcionCurso">Este curso esta dividido en tres importantes partes que es el temario, la parte te&oacute;rica y la parte práctica que son la resolución de ejercicios mostrados en un video.</div>
+                          <div class="inscribirme" class="add">Inscribirme</div>
                         </div>
                       </div>
                        
@@ -158,5 +160,6 @@
   <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
   <script type="text/javascript" src="js/scroll.js"></script>
   <script type="text/javascript" src="js/pf.js"></script>
+  <script type="text/javascript" src="js/agregarGrupo.js"></script>
 </body>
 </html>

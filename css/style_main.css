@@ -213,6 +213,18 @@ body{
 	padding: 3px;
 	text-align: justify;
 }
+
+.inscribirme{
+
+	width: 50%;
+	margin-top: 55px;
+	padding: 5px;
+	color: #fff;
+	text-align: center;
+	background-color: rgba(0,0,0,0.6);
+	position: relative;
+	float: right;
+}
 .tutor{
 
 	width: 100%;

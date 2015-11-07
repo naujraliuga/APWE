@@ -3,13 +3,13 @@
 <head>
 
     <link rel="stylesheet" type="text/css" href="css/style_curso.css">
-	<title>:: [nombre-curso]</title>
+	<title>:: Programaci&oacute;n 1</title>
 </head>
 <body>
 
 
     <div id="container-main">
-        <section id="title">[nombre-curso]</section>
+        <section id="title">Programaci&oacute;n 1</section>
     	<section id="container-files">
     		<ul>
     			<br> Archivos de curso <br>

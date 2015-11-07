@@ -326,6 +326,11 @@
 	background-color: #f2f2f2;
 }
 
+
+#mis_grupos a{
+	text-decoration: none;
+	color: #8f8f8f;
+}
 .group-section{
 
 	width: 38%;
@@ -430,3 +435,88 @@
 	background-color: rgba(0,0,0,0.35);
 }
 
+/*=========================DISEÑO RESPONSIVE ================*/
+
+@media screen and (max-width: 1024px) {
+
+	.section-usuario{
+		width: 100%;
+	}
+
+	#bg_home, #bg_cursos, #bg_upload{
+		width: 540px;
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+
+
+}
+
+@media screen and (max-width: 800px) {
+
+	.section-usuario{
+		width: 100%;
+	}
+
+	#bg_home, #bg_cursos, #bg_upload{
+		width: 350px;
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+
+	#bg_perfil{
+
+		height: 330px;
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+
+	.group-section{
+		width: 85%;
+		margin-top: 20px;
+		left: 5%;
+	}
+
+	.cbx, .btn{
+		width: 101.7%;
+	}
+
+	#bg_buscar{
+
+		margin-left: 50px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+
+	.section-usuario{
+		width: 100%;
+	}
+
+	#bg_home, #bg_cursos, #bg_upload{
+		width: 100%;
+		height: 315px;
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+
+	#mis_grupos{
+
+		width: 100%;
+	}
+
+	#bg_upload{
+		margin-bottom: 80px;
+	}
+
+	#bg_buscar{
+		width: 100%;
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+
+	.txt-buscar{
+
+		width: 70%;
+	}
+}

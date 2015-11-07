@@ -20,4 +20,22 @@
         return $cont;
      }
 
+     function getGrupos($idGrupo){
+
+        include 'conexion.php';
+        $CURSO = mysqli_query($conexion,'SELECT * FROM cursos WHERE id_curso="'.$idGrupo.'"');
+        $MI_CURSO = mysqli_num_rows($CURSO);
+
+        if($MI_CURSO==1){
+            $C = mysqli_fetch_array($CURSO);
+        }else
+         $C = null;
+
+         return $C;
+
+       
+
+     }
+
+
 ?>
