@@ -24,7 +24,7 @@
                   else{
                     echo '<form action="altaCurso.php" method="POST">';
                     echo '<input type="text" name="matricula" value="'.$_SESSION['sesionUsuario'].'"'.'class="oculto">';
-                    echo '<input type="text" name="matricula" value="'.$idCurso.'"'.'class="oculto">';
+                    echo '<input type="text" name="idCurso" value="'.$idCurso.'"'.'class="oculto">';
                     echo '<input type="submit" id="containerAddGrupo" value="Inscribirme a Curso" class="btn">';
                     echo '</form>';
                   }
