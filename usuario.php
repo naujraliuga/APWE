@@ -46,6 +46,13 @@
                   <div class="nombre-opc">Buscar Curso</div>
                 </li>
                 
+                <a href="repositorio.php">
+                <li>
+                  <div class="ico-opc" id="file"></div>
+                  <div class="nombre-opc">Archivos Cursos</div>
+                </li>
+                </a>
+                
                 <a href="salir.php">
                 <li>
                   <div class="ico-opc" id="logout"></div>

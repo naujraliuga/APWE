@@ -164,6 +164,14 @@
 	background-repeat: no-repeat;
 }
 
+#file{
+
+	background-image: url(../img/file.png);
+	background-position: cover;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
 /*secciones*/
 
 .section-usuario{
