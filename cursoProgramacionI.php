@@ -12,13 +12,67 @@
         <section id="title">Programaci&oacute;n 1</section>
     	<section id="container-files">
     		<ul>
-    			<br> Archivos de curso <br>
-    			<li class="list-file">Archivo 1</li>
-    			<li class="list-file">Archivo 2</li>
+    			<br> Temario <br>
+    			<li class="list-file" id="introduccion">Introducci&oacute;n</li>
+                <li class="list-file" id="tipoDeDatos">Tipos de datos</li>
+                <li class="list-file" id="estructurasDeControl">Estructuras de control</li>
+    			<li class="list-file" id="funciones">Funciones</li>
     		</ul>
     	</section>
-    	<section id="container-view-files"></section>
-    </div>
+    	<section id="container-view-files">
 
+           <section class="containerTema" id="_introduccion">
+               <div class="title-tema">Introducci&oacute;n</div>
+               <p class="descripcion-tema">
+                  Bienvenido al curso de programaci&oacute;n I, en este curso aprender&aacute;s los conceptos basicos 
+                  de programaci&oacute;n, con ayuda de un tutor podras comprender mejor los temas que aqui te presentamos.
+                  <br><br>
+                  La programaci&oacute;n es una actividad de eminentemente pr&aacute;ctica, vaya esto por delante. 
+                  Los conceptos te&oacute;ricos pueden ser dif&iacute;ciles de aprehender, pero no son largos, ni 
+                  constituyen el n&uacute;cleo de la programaci&oacute;n. <br><br>
+                  Por esta raz&oacute;n, presentaremos brevemente los conceptos te&oacute;ricos, pasaremos con la 
+                  mayor rapidez posible a la pr&aacute;ctica.<br><br>
+                  
+                  Cuerpo de un programa en C : <br><br>
+
+                  #include <libreria.h>//librerias<br>
+                  #define pi 3.1416 //declaracion de constantes<br><br>
+                  int suma(param1 ,param2){//funciones<br>
+                      //cuerpo de funcion<br>
+                  }<br><br>
+
+                  int main(){//funcion principal del programa<br><br>
+                         int a;//declaracion de variables<br>
+                         //cuerpo de programa<br><br>
+                  }//fin de programa<br>
+
+
+                  </p> 
+           </section>  
+           
+           <section class="containerTema" id="_tipoDeDatos">
+               <div class="title-tema">Tipos de Datos</div>
+               <p class="descripcion-tema">
+                 El primer objetivo de un programa inform&aacute;tico es el manejo de datos. Un dato es toda aquella informaci&oacute;n que se puede tratar en un programa inform&aacute;tico.
+                 En este art&iacute;culo vamos a conocer los tipos de datos que podemos manejar programando en C.
+                 Existen unos datos de entrada y unos datos de salida.
+                 Los datos de entrada se manipulan en el programa produciendo unos datos de salida.
+               <p>
+               <div class="img">
+                   <img src="img/tipoDatos.png">
+               </div>
+               <div class="img">
+                   <img src="img/declaracionVariable.png">
+               </div>
+           </section>  
+           
+           <section class="containerTema" id="_estructurasDeControl"></section>  
+           
+           <section class="containerTema" id="_funciones"></section>  
+
+        </section>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/menuProgramacion.js"></script>
 </body>
 </html>

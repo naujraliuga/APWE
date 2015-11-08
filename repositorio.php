@@ -35,7 +35,7 @@
     			
     		</ul>
     	</section>
-    	<section id="container-view-files" class="bg_files"></section>
+    	<section id="container-view" class="bg_files"></section>
     </div>
 
 </body>

@@ -206,14 +206,13 @@
                                    <?php 
                                     include 'conexion.php';
 
-                                    $CURSO = mysqli_query($conexion,'SELECT * FROM usuarios_cursos WHERE matricula="'.$_SESSION['sesionUsuario'].'"');
+                                    $CURSO = mysqli_query($conexion,'SELECT * FROM cursos');
                                     $FILAS = mysqli_num_rows($CURSO);
 
                                     if($FILAS>=1){
                         
                                        while($RES=mysqli_fetch_array($CURSO)){
-                                           $NOMBRE_GRUPO = getGrupos($RES['id_curso']);
-                                           echo '<option value="'.$RES['id_curso'].'">'.$NOMBRE_GRUPO['nombre'].'</option>';
+                                           echo '<option value="'.$RES['id_curso'].'">'.$RES['nombre'].'</option>';
                                    
                                        }
                                     }else
