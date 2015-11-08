@@ -32,7 +32,7 @@ ul li{
 	font-size: 1.5em;
 }
 
-#PT{
+#PT,#PP{
 	margin-left: 0.5em;
 	font-size: 1.5em;
 }
@@ -48,16 +48,25 @@ ul li{
 #Imagen1{
     
     margin-right: 3em;
-    margin-bottom: 1.5em;
     margin-left: 1em;
 	display: inline-block;
-	height: 450px;  
+	height: 500px;  
 	background: #FFF;
 	border: 0.1em solid #000;
 	border-radius: 0 0.5em 0 0.5em;
 
 }
+#Imagen2{
+    
+    margin-right: 3em;
+    margin-left: 1em;
+	display: inline-block;
+	height:600px;  
+	background: #FFF;
+	border: 0.1em solid #000;
+	border-radius: 0 0.5em 0 0.5em;
 
+}
 #Video1{
 	border: 0.8em solid #F7763E;
 	border-radius: 0 0.7em 0 0.7em;
