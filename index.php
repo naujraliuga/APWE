@@ -118,11 +118,59 @@
         <section id="pf">
           <div id="containerPF">
                 
-                <div class="pregunta">
-                  <div class="tituloPregunta">&#191;Como me doy de alta en un curso&#63;</div>
-                  <div class="respuestaPregunta">Para darte de alta en un curso selecciona el curso en la secci&oacute;n "Cursos", acontinuaci&oacute;n te mostrara la opci&oacute;n "Inscribirme"</div>
-                </div>
 
+                <?php 
+                     include 'conexion.php';
+                     include 'consultas.php';
+
+                     $GET_PREGUNTA  = mysqli_query($conexion,'SELECT * FROM preguntas');
+                     $NUM_PREGUNTAS = mysqli_num_rows($GET_PREGUNTA);
+
+                     if($NUM_PREGUNTAS>=1){
+                      
+                      while($PREGUNTA = mysqli_fetch_array($GET_PREGUNTA)){
+
+                            $USUARIO =  getUsuario($PREGUNTA['matricula']);
+                            echo '<div class="pregunta">';
+                                 echo ' <div class="tituloPregunta">'.$USUARIO['nombre'].' '.$USUARIO['apellidos'].' : &#191;'.$PREGUNTA['contenido'].'&#63;</div>';
+                                 //========== INICIO RESPUESTAS A PREGUNTA
+                                 
+                                 $GET_RESPUESTA  = mysqli_query($conexion,'SELECT * FROM respuestas WHERE id_pregunta="'.$PREGUNTA['id_pregunta'].'"');
+                                 $NUM_RESPUESTAS = mysqli_num_rows($GET_RESPUESTA);
+                                
+                                 if($NUM_RESPUESTAS>=1){
+                                          
+                                          while($RESPUESTA = mysqli_fetch_array($GET_RESPUESTA)){
+                                           
+                                            echo ' <div class="respuestaPregunta">'.$RESPUESTA['contenido'].'</div>';
+                                          }
+                                 }else
+                                   echo ' <div class="respuestaPregunta">Pregunta aun sin respuesta, ¡se el primero en responder!</div>';
+                                 
+                                 //========== FIN RESPUESTAS A PREGUNTA
+
+                                 echo ' <div class="responderPregunta">';
+                                      echo '<form action="guardarRespuesta.php" method="post">';
+                                           echo ' <input type="text" name="idPregunta" class="oculto" value='.$PREGUNTA['id_pregunta'].'>';
+                                           echo ' <input type="text" name="respuesta" placeHolder="Escribir Respuesta..." class="_txt">';
+                                           echo ' <input type="submit" name="enviar" value="Responder" class="_btn">';
+                                      echo '</form>';
+                                 echo ' </div>';
+                            echo ' </div>';
+                            
+
+                      }
+                      
+
+                     }else{
+                          
+                          echo '<div class="pregunta">';
+                                 echo ' <div class="tituloPregunta">Sin Preguntas en el sistema</div>';
+                          echo ' </div>';
+                     }
+                          
+                 ?>
+                
                 <div class="preguntar" id="preguntar">Hacer Pregunta.</div>
 
           </div>
@@ -131,8 +179,8 @@
         <div id="bg"><!-- REALIZAR PREGUNTA-->
         </div>
         <div id="containerPregunta">
-               <form action="#" method="post">
-                <input type="text" name="usuario" placeHolder="[Usuario]" class="txt">
+               <form action="guardarPregunta.php" method="post">
+                <input type="text" name="usuarioPregunta" placeHolder="[Matricula-Usuario]" class="txt">
                 <input type="text" name="contenidoPregunta" placeHolder="[Pregunta]" class="txt">
                 <input type="submit" name="enviarPregunta" value="Enviar Pregunta" class="btn">
                </form>

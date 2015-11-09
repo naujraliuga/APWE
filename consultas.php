@@ -55,5 +55,32 @@
         $add = mysqli_query($conexion,"INSERT INTO usuarios_cursos (matricula, id_curso) VALUES ('$matricula','id_curso')");
      }
 
+     function existeMatricula($matricula){
+
+        include 'conexion.php';
+        $existe = false;
+        $USUARIO = mysqli_query($conexion,'SELECT * FROM usuarios WHERE matricula = "'.$matricula.'"');
+        $RESULT  = mysqli_num_rows($USUARIO);
+
+        if($RESULT==1)
+            $existe = true;
+
+        return $existe;
+
+     }
+
+     function getUsuario($matricula){
+
+        include 'conexion.php';
+
+        $USUARIO = mysqli_query($conexion,'SELECT * FROM usuarios WHERE matricula ="'.$matricula.'"');
+        $T       = mysqli_num_rows($USUARIO);
+
+        if($T==1)
+            return mysqli_fetch_array($USUARIO);
+        else
+            return null;
+     }
+
 
 ?>
