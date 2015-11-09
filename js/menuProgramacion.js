@@ -24,13 +24,6 @@ $(document).on('ready', function(){
           $('#_funciones').hide('slow');
      });
 
-     $('#funciones').on('click',function(){
-
-          $('#_introduccion').hide('slow');
-          $('#_tipoDeDatos').hide('slow');
-          $('#_estructurasDeControl').hide('slow');
-          $('#_funciones').show('slow');
-     });
 
 
 });

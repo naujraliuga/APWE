@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <?php 
+      include 'consultas.php'; 
+      session_start();
+      $idCurso = 100;
+    ?>
     <link rel="stylesheet" type="text/css" href="css/style_curso.css">
 	<title>:: Programaci&oacute;n 1</title>
 </head>
@@ -9,14 +13,30 @@
 
 
     <div id="container-main">
-        <section id="title">Programaci&oacute;n 1</section>
+        <section id="title">Programaci&oacute;n 1
+        <?php 
+                if(empty($_SESSION['sesionUsuario']))
+                  echo '<a href="index.php#acceso"><div id="containerAddGrupo"> Inscribirme a Curso</div></a>';
+                else{
+
+                  if(verificarCurso($_SESSION['sesionUsuario'],$idCurso))
+                   echo '<div id="containerAddGrupo">Inscrito</div>';
+                  else{
+                    echo '<form action="altaCurso.php" method="POST">';
+                    echo '<input type="text" name="matricula" value="'.$_SESSION['sesionUsuario'].'"'.'class="oculto">';
+                    echo '<input type="text" name="idCurso" value="'.$idCurso.'"'.'class="oculto">';
+                    echo '<input type="submit" id="containerAddGrupo" value="Inscribirme a Curso" class="btn">';
+                    echo '</form>';
+                  }
+                }
+         ?>
+        </section>
     	<section id="container-files">
     		<ul>
     			<br> Temario <br>
     			<li class="list-file" id="introduccion">Introducci&oacute;n</li>
                 <li class="list-file" id="tipoDeDatos">Tipos de datos</li>
                 <li class="list-file" id="estructurasDeControl">Estructuras de control</li>
-    			<li class="list-file" id="funciones">Funciones</li>
     		</ul>
     	</section>
     	<section id="container-view-files">
@@ -66,9 +86,41 @@
                </div>
            </section>  
            
-           <section class="containerTema" id="_estructurasDeControl"></section>  
+           <section class="containerTema" id="_estructurasDeControl">
+               <div class="title-tema">Estructuras de Control</div>
+               <p class="descripcion-tema">
+                 <strong>Estructuras Selectivas :</strong> Las estructuras de selecci&oacute;n (o bifurcaci&oacute;n) se
+                 utilizan para elegir entre diversos cursos de acci&oacute;n.En C hay tres tipos de estructuras de
+                 selecci&oacute;n: if (selección simple), if…else (selecci&oacute;n doble) y switch (selecci&oacute;n
+                 m&uacute;ltiple).<br> 
+               <p>
+                <div class="img">
+                   <img src="img/if.png">
+                </div>
+                <div class="img">
+                   <img src="img/ifelse.png">
+                </div>
+                <div class="img">
+                   <img src="img/switch.png">
+                </div>
+
+                <p class="descripcion-tema">
+                  <strong>Estructuras Iterativas :</strong> Estas estructuras permiten repetir una serie de veces la ejecuci&oacute;n de unas l&iacute;nneas de 
+                 c&oacute;ndigo. Esta iteraci&oacute;n se realiza o bien un n&uacute;mero determinado de veces o bien
+                 hasta que se cumpla una determinada condici&oacute;n de tipo l&oacute;ngico o aritm&eacute;tico.
+                 En C hay 3 tipos de instrucciones de repetici&oacute;n: while,do…while y for.
+               <p>
+                <div class="img">
+                   <img src="img/while.png">
+                </div>
+                <div class="img">
+                   <img src="img/dowhile.png">
+                </div>
+                <div class="img">
+                   <img src="img/for.png">
+                </div>
+           </section>  
            
-           <section class="containerTema" id="_funciones"></section>  
 
         </section>
     </div>
