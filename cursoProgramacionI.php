@@ -14,18 +14,19 @@
 
     <div id="container-main">
         <section id="title">Programaci&oacute;n 1
+        <a href="usuario.php#_grupos"class="volver">Volver a mis Cursos</a>
         <?php 
                 if(empty($_SESSION['sesionUsuario']))
-                  echo '<a href="index.php#acceso"><div id="containerAddGrupo"> Inscribirme a Curso</div></a>';
+                  echo '<a href="index.php#acceso"><div class="containerAddGrupo"> Inscribirme a Curso</div></a>';
                 else{
 
                   if(verificarCurso($_SESSION['sesionUsuario'],$idCurso))
-                   echo '<div id="containerAddGrupo">Inscrito</div>';
+                   echo '<div class="containerAddGrupo">Inscrito</div>';
                   else{
                     echo '<form action="altaCurso.php" method="POST">';
                     echo '<input type="text" name="matricula" value="'.$_SESSION['sesionUsuario'].'"'.'class="oculto">';
                     echo '<input type="text" name="idCurso" value="'.$idCurso.'"'.'class="oculto">';
-                    echo '<input type="submit" id="containerAddGrupo" value="Inscribirme a Curso" class="btn">';
+                    echo '<input type="submit" class="containerAddGrupo" value="Inscribirme a Curso">';
                     echo '</form>';
                   }
                 }

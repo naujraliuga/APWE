@@ -18,31 +18,31 @@
 
      	<div id="menu-usuario">
      		<ul>
-     			<li>
-     				<div class="ico-opc" id="home"></div>
+     			<li id="home">
+     				<div class="ico-opc" id="home-ico"></div>
      				<div class="nombre-opc">Inicio</div>
      			</li>
-     			<li>
-     				<div class="ico-opc" id="perfil"></div>
+     			<li id="perfil">
+     				<div class="ico-opc" id="perfil-ico"></div>
      				<div class="nombre-opc"><?php echo ''.$_SESSION['nombreUsuario'].'' ?></div>
      			</li>
-     			<li>
-     				<div class="ico-opc" id="grupos"></div>
+     			<li id="grupos">
+     				<div class="ico-opc" id="grupos-ico"></div>
      				<div class="nombre-opc">Mis Cursos</div>
      			</li>
      			
-                <li>
-                  <div class="ico-opc" id="upload"></div>
+                <li id="upload">
+                  <div class="ico-opc" id="upload-ico"></div>
                   <div class="nombre-opc">Subir Archivo</div>
                 </li>
 
-     			<li>
-     			  <div class="ico-opc" id="configuracion"></div>
+     			<li id="configuracion">
+     			  <div class="ico-opc" id="configuracion-ico"></div>
      			  <div class="nombre-opc">Configuraci&oacute;n</div>
      			</li>
 
-                <li>
-                  <div class="ico-opc" id="buscar"></div>
+                <li id="buscar">
+                  <div class="ico-opc" id="buscar-ico"></div>
                   <div class="nombre-opc">Buscar Curso</div>
                 </li>
                 

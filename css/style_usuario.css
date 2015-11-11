@@ -108,7 +108,7 @@
 	float: left;
 }
 
-#home{
+#home-ico{
 
 	background-image: url(../img/home.png);
 	background-position: 100%;
@@ -116,7 +116,7 @@
 	background-repeat: no-repeat;
 }
 
-#perfil{
+#perfil-ico{
 
 	background-image: url(../img/perfil.png);
 	background-position: 100%;
@@ -124,7 +124,7 @@
 	background-repeat: no-repeat;
 }
 
-#configuracion{
+#configuracion-ico{
 
 	background-image: url(../img/config.png);
 	background-position: 100%;
@@ -132,7 +132,7 @@
 	background-repeat: no-repeat;
 }
 
-#upload{
+#upload-ico{
 
 	background-image: url(../img/upload.png);
 	background-position: 100%;
@@ -140,7 +140,7 @@
 	background-repeat: no-repeat;
 }
 
-#grupos{
+#grupos-ico{
 
 	background-image: url(../img/grupos.png);
 	background-position: 100%;
@@ -148,7 +148,7 @@
 	background-repeat: no-repeat;
 }
 
-#buscar{
+#buscar-ico{
 
 	background-image: url(../img/buscar.png);
 	background-position: 100%;
