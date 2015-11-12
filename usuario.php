@@ -140,21 +140,16 @@
                     <legend>Modificar Informaci&oacute;n Personal</legend>
 
                     <form action="update_usuario.php" method="POST">
-                        <input type="text"     name="nombre"    value = <?php echo''.$_SESSION['nombreUsuario'].''; ?>    class="tbx">
-                        <input type="text"     name="apellidos" value = <?php echo''.$_SESSION['apellidosUsuario'].''; ?> class="tbx">
-                        <input type="text"     name="email"     value = <?php echo''.$_SESSION['correoUsuario'].''; ?>     class="tbx">
-                        <input type="text"     name="matricula" value = <?php echo''.$_SESSION['sesionUsuario'].''; ?>    class="tbx">
-                        <input type="password" name="password"  value = <?php echo''.$_SESSION['passwordUsuario'].''; ?>  class="tbx">
-                        <select name="tipo-usuario" class="cbx">
-                            <option value=<?php echo ''.$_SESSION['tipoUsuario'].''; ?>><?php if($_SESSION['tipoUsuario']==1)
-                                                       echo'Tutor'; 
-                                                       else
-                                                        echo'Alumno'; 
-                                               ?>
-                            </option>
-                            <option value="2">Alumno</option>
-                            <option value="1">Tutor</option>
-                        </select>
+                        <?php 
+                            
+                            $MI_USUARIO = getUsuario($_SESSION['sesionUsuario']);
+                         ?>
+                        <input type="text"     name="nombre"    value = <?php echo''.$MI_USUARIO['nombre'].''; ?>    class="tbx">
+                        <input type="text"     name="apellidos" value = <?php echo''.$MI_USUARIO['apellidos'].''; ?> class="tbx">
+                        <input type="text"     name="email"     value = <?php echo''.$MI_USUARIO['correo'].''; ?>     class="tbx">
+                        <input type="text"     name="matricula" value = <?php echo''.$MI_USUARIO['matricula'].''; ?>    class="tbx">
+                        <input type="password" name="password"  value = <?php echo''.$MI_USUARIO['password'].''; ?>  class="tbx">
+
 
                         <input type="submit" value="Guardar Cambios" class="btn">
                     </form>
