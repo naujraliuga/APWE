@@ -14,7 +14,7 @@
        <section id="registro">
                 <form id="usuarioForm">
                 	<input type="text"      id ="nombre"    placeHolder="Nombre"     class="txt">
-                	<input type="text"      id ="apellidos" placeHolder="Apellidos"  class="txt">
+                	<input type="text"      id ="apellidos" placeHolder="Apellido Paterno"  class="txt">
                 	<input type="text"      id ="matricula" placeHolder="Matricula"  class="txt">
                   <input type="password"  id ="password"  placeHolder="Password"   class="txt">
                   <input type="email"     id ="correo"    placeHolder="E-Mail"     class="txt">

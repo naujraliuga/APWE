@@ -29,8 +29,10 @@ function ejecutarAjax(event){
 
      }).done(function(datos){
      	
-          if(datos.exito)
-          	alert("Usuario Registrado");
+          if(datos.exito){
+            alert("Usuario Registrado, ahora puedes acceder.");
+            window.location.href = "usuario.php#acceso";
+          }
           else
           	alert("Error al registrar usuario, vuelve a intentarlo.");
 
