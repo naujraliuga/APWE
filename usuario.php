@@ -199,20 +199,21 @@
                                 <select name="archivo-curso" class="cbx">
                                  <option value="0">Curso al que pertenece el archivo</option>
                                    <?php 
-                                    include 'conexion.php';
+                                        include 'conexion.php';
 
-                                    $CURSO = mysqli_query($conexion,'SELECT * FROM cursos');
-                                    $FILAS = mysqli_num_rows($CURSO);
+                                        $CURSO = mysqli_query($conexion,'SELECT * FROM usuarios_cursos WHERE matricula="'.$_SESSION['sesionUsuario'].'"');
+                                        $FILAS = mysqli_num_rows($CURSO);
 
-                                    if($FILAS>=1){
+                                        if($FILAS>=1){
                         
-                                       while($RES=mysqli_fetch_array($CURSO)){
-                                           echo '<option value="'.$RES['id_curso'].'">'.$RES['nombre'].'</option>';
+                                           while($RES=mysqli_fetch_array($CURSO)){
+                                               $NOMBRE_GRUPO = getGrupos($RES['id_curso']);
+                                               echo '<option value="'.$RES['id_curso'].'">'.$NOMBRE_GRUPO['nombre'].'</option>';
                                    
-                                       }
-                                    }else
-                                   echo '<option value="0">Sin Grupos</option>';
-                                  ?>  
+                                           }
+                                        }else
+                                       echo '<option value="0">Sin Grupos</option>';
+                                   ?>  
                                 </select>
                                 <input type="submit" value="Subir" class="btn" id="btn-upload">
                          </form>
